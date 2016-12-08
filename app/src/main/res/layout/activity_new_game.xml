@@ -34,7 +34,8 @@
             style="@style/h1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_game_type" />
+            android:text="@string/select_game_type"
+            android:gravity="center_horizontal"/>
 
         <Space
             android:layout_width="match_parent"
@@ -60,10 +61,11 @@
             android:text="@string/play_with_friends"></Button>
 
         <TextView
-            style="@style/h4"
+            style="@style/h6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/multiplayer_tip" />
+            android:text="@string/multiplayer_tip"
+            android:gravity="center_horizontal"/>
 
         <Space
             android:layout_width="match_parent"
@@ -80,7 +82,8 @@
         android:id="@+id/selectPlayersScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <Space
             android:layout_width="match_parent"
@@ -133,7 +136,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnDismissAgain"
+            android:id="@+id/btnStartGame"
             style="@style/btnBlock"
             android:layout_width="match_parent"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -152,7 +155,7 @@
                 android:text="@string/back"></Button>
 
             <Button
-                android:id="@+id/btnDismissOnceAgain"
+                android:id="@+id/btnDismissAgain"
                 style="@style/btnDefault"
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="20dp"

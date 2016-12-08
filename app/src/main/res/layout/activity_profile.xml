@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp" />
     <Button
-        android:id="@+id/btnDismissAgain"
+        android:id="@+id/btnChangeProfile"
         style="@style/btnBlock"
         android:layout_width="match_parent"
         android:text="@string/change_profile"></Button>

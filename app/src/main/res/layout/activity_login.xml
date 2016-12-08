@@ -27,6 +27,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         style="@style/h1"/>
     <ImageView
+        android:id="@+id/facebook"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:paddingTop="@dimen/activity_vertical_margin"
@@ -41,6 +42,7 @@
         style="@style/h1"/>
 
     <ImageView
+        android:id="@+id/google"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:paddingTop="@dimen/activity_vertical_margin"
