@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -49,6 +49,22 @@
         <item name="android:textAlignment">center</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h5" parent="AppTheme">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="h6" parent="AppTheme">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTextPrimary60</item>
     </style>
     <style name="score" parent="AppTheme">
         <item name="android:textSize">20dp</item>

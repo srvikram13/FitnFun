@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="srvikram13.fitnfun.NewGameActivity">
+    tools:context="srvikram13.fitnfun.view.NewGameActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -90,6 +90,7 @@
             style="@style/h1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/add_players" />
 
         <Space

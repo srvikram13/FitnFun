@@ -9,14 +9,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="srvikram13.fitnfun.LoginActivity"
+    tools:context="srvikram13.fitnfun.view.LoginActivity"
     android:background="@drawable/fitnfunbg"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:contentDescription="@string/fit_n_fun_logo"
+        android:src="@drawable/logo_with_name_horizontal"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
+        android:gravity="center_horizontal"
         android:paddingTop="@dimen/activity_vertical_margin"
         style="@style/h1"/>
     <ImageView
@@ -29,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/_or_"
+        android:gravity="center_horizontal"
         android:paddingTop="@dimen/activity_vertical_margin"
         style="@style/h1"/>
 

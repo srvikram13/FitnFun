@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="srvikram13.fitnfun.GameActivity">
+    tools:context="srvikram13.fitnfun.view.GameActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/time_remaining"
+        android:gravity="center_horizontal"
         style="@style/h4"/>
 
     <Space
@@ -37,6 +38,7 @@
         android:id="@+id/countdownTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="60"
         style="@style/h0"/>
 
@@ -52,6 +54,7 @@
         android:textColor="@color/colorPrimaryText"
         android:textAllCaps="false"
         android:padding="10dp"
+        android:gravity="center_horizontal"
         android:text="Jump on the spot 10 times and dance like a monkey."/>
 
     <Space

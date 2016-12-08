@@ -1,13 +1,15 @@
-package srvikram13.fitnfun;
+package srvikram13.fitnfun.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ScoreCardActivity extends AppCompatActivity {
+import srvikram13.fitnfun.R;
+
+public class ScoreBoardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score_card);
+        setContentView(R.layout.activity_score_board);
     }
 }

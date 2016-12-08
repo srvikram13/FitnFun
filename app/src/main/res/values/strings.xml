@@ -47,4 +47,5 @@
     <string name="scorecard">score card</string>
     <string name="home">home</string>
     <string name="play_again">play again</string>
+    <string name="change_profile">change profile</string>
 </resources>
