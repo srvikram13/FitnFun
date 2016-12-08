@@ -42,4 +42,9 @@
     <string name="more">more</string>
 
     <string name="game_over">game over</string>
+    <string name="time_remaining">time remaining</string>
+    <string name="end_game">end game</string>
+    <string name="scorecard">score card</string>
+    <string name="home">home</string>
+    <string name="play_again">play again</string>
 </resources>

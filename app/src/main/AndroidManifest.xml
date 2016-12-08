@@ -29,6 +29,9 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".NewGameActivity" />
+        <activity android:name=".GameActivity" />
+        <activity android:name=".ScoreCardActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
