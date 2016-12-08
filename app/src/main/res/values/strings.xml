@@ -1,6 +1,45 @@
 <resources>
-    <string name="app_name">FitnFun</string>
-
+    <string name="app_name">Fit n Fun</string>
+    <string name="fit_n_fun_logo">Fit n Fun Logo</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Welcome</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="intro_text">Get fit while having fun</string>
+    <string name="welcome">Login to Continue</string>
+    <string name="_or_">-OR-</string>
+    <string name="profile">profile</string>
+    <string name="scoreboard">scoreboard</string>
+    <string name="new_game">new game</string>
+    <string name="help_tutorial">help/tutorial</string>
+    <string name="about">about</string>
+
+    <string name="select_game_type">Select Game Type</string>
+    <string name="go_solo">go solo</string>
+    <string name="play_with_friends">play with friend(s)</string>
+    <string name="multiplayer_tip">(no need of another device)</string>
+    <string name="back_to_main_menu">back to main menu</string>
+
+    <string name="add_players">add players</string>
+    <string name="username">Vikram Deshmukh</string>
+    <string name="add_player">add player</string>
+    <string name="enter_player_two">enter player two</string>
+    <string name="start_game">start game</string>
+    <string name="back">back</string>
+    <string name="add_more">add more</string>
+    <string name="more">more</string>
+
+    <string name="game_over">game over</string>
 </resources>

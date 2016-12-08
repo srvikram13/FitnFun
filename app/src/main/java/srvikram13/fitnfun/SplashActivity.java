@@ -1,6 +1,7 @@
 package srvikram13.fitnfun;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -90,7 +91,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         mVisible = true;
-        mControlsView = findViewById(R.id.fullscreen_content_controls);
+        /*mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
 
@@ -105,7 +106,7 @@ public class SplashActivity extends AppCompatActivity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);*/
     }
 
     @Override
@@ -116,7 +117,17 @@ public class SplashActivity extends AppCompatActivity {
         // created, to briefly hint to the user that UI controls
         // are available.
         delayedHide(100);
+        mHideHandler.postDelayed(mUpdateTimeTask, 100);
+
+
+
     }
+    private Runnable mUpdateTimeTask = new Runnable() {
+        public void run() {
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(i);
+        }
+    };
 
     private void toggle() {
         if (mVisible) {
@@ -145,7 +156,7 @@ public class SplashActivity extends AppCompatActivity {
         // Show the system bar
         mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
-        mVisible = true;
+        mVisible = false;
 
         // Schedule a runnable to display UI elements after a delay
         mHideHandler.removeCallbacks(mHidePart2Runnable);

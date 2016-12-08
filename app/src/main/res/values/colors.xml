@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="black_overlay">#202020</color>
+    <!-- Theme generated from https://www.materialpalette.com/red/blue-grey -->
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorPrimaryText">#FFFFFF</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
 
-    <color name="black_overlay">#66000000</color>
+    <color name="colorPrimaryDark60">#aa455A64</color>
+    <color name="colorPrimary60">#aa607D8B</color>
+    <color name="colorPrimaryLight60">#aaCFD8DC</color>
+    <color name="colorPrimaryText60">#aaFFFFFF</color>
+    <color name="colorAccent60">#aaFFC107</color>
+    <color name="colorTextPrimary60">#aa212121</color>
+    <color name="colorTextSecondary60">#aa757575</color>
+    <color name="colorDivider60">#aaBDBDBD</color>
+
+    <color name="colorPrimary40">#88607D8B</color>
+    <color name="colorPrimary20">#44607D8B</color>
 </resources>

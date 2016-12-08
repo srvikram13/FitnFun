@@ -20,4 +20,74 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
+    <style name="h1" parent="AppTheme">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h4" parent="AppTheme">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="btnBlock" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:padding">20sp</item>
+        <item name="android:drawablePadding">-30dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="btnMedium" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:padding">14sp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="btnDefault" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:padding">14sp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="btnCancel" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:padding">14sp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="editableField" parent="AppTheme">
+        <item name="android:textSize">22dp</item>
+        <item name="android:background">@color/colorPrimary20</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
 </resources>
