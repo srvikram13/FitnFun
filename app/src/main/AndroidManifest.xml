@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme"
@@ -16,14 +15,15 @@
         <activity
             android:name=".view.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/FullscreenTheme">
+            android:theme="@style/FullscreenTheme"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.LoginActivity"/>
+        <activity android:name=".view.LoginActivity" android:noHistory="true"/>
         <activity android:name=".view.HomeActivity" />
         <activity android:name=".view.NewGameActivity" />
         <activity android:name=".view.GameActivity" />

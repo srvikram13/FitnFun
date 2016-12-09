@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="srvikram13.fitnfun.view.GameActivity">
+    tools:context="srvikram13.fitnfun.controller.MotionSensor">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="10dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="10dp" />
 
     <TextView
         android:id="@+id/countdownTimer"
@@ -44,7 +44,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="10dp" />
     <TextView
         android:id="@+id/nextChallenge"
         android:layout_width="match_parent"
@@ -55,12 +55,32 @@
         android:textAllCaps="false"
         android:padding="10dp"
         android:gravity="center_horizontal"
-        android:text="Jump on the spot 10 times and dance like a monkey."/>
+        android:text="Jump on the spot 10 times."/>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your score"
+        android:gravity="center_horizontal"
+        style="@style/h4"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="60"
+        style="@style/h1"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
     <Button
         android:id="@+id/btnEndGame"
         style="@style/btnBlock"

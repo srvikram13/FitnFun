@@ -1,5 +1,6 @@
 package srvikram13.fitnfun.controller;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -8,16 +9,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.FloatMath;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import srvikram13.fitnfun.R;
+import srvikram13.fitnfun.view.ScoreCardActivity;
+
 /**
  * Created by vikram on 12/8/2016.
  */
 
 
-public class MotionSensor extends AppCompatActivity implements SensorEventListener {
+public class MotionSensor extends AppCompatActivity implements SensorEventListener, View.OnClickListener {
 
     private static final String TAG = "DEBUG: MainActivity";
     /**
@@ -40,9 +45,10 @@ public class MotionSensor extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_game);
+
+        Button btnEndGame = (Button) findViewById(R.id.btnEndGame);
+        btnEndGame.setOnClickListener(this);
 
         //mJumpCounter = Utils.getCounterFromPreference(this);
         mJumpCounter = 0;
@@ -267,4 +273,14 @@ public class MotionSensor extends AppCompatActivity implements SensorEventListen
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        Intent i;
+        switch(view.getId()) {
+            case R.id.btnEndGame:
+                i = new Intent(this, ScoreCardActivity.class);
+                startActivity(i);
+                break;
+        }
+    }
 }
