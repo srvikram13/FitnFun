@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import srvikram13.fitnfun.controller.MotionSensor;
 import srvikram13.fitnfun.R;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{

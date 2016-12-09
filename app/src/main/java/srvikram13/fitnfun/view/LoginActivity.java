@@ -7,13 +7,17 @@ import android.view.View;
 import android.widget.ImageView;
 
 import srvikram13.fitnfun.R;
+import srvikram13.fitnfun.model.AppData;
 
 
 public class LoginActivity extends AppCompatActivity {
+    private AppData appData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        appData = AppData.getInstance(getApplicationContext());
         ImageView fb = (ImageView) findViewById(R.id.facebook);
         ImageView g = (ImageView) findViewById(R.id.google);
 
