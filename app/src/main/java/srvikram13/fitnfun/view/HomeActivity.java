@@ -56,4 +56,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+    /*@Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        setContentView(R.layout.activity_home);
+        super.onConfigurationChanged(newConfig);
+        *//*if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            createHorizontalalLayout();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            createVerticalLayout();
+        }*//*
+    }*/
 }
+

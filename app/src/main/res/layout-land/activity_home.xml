@@ -28,6 +28,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
             <Button
                 android:id="@+id/btnProfile"
                 style="@style/btnBlock"
@@ -44,30 +54,45 @@
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:drawableLeft="@drawable/ic_scoreboard"
                 android:text="@string/scoreboard"></Button>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
             <Button
                 android:id="@+id/btnNewGame"
                 style="@style/btnBlock"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:drawableLeft="@drawable/ic_new_game"
                 android:text="@string/new_game"></Button>
+
+                <Button
+                    android:id="@+id/btnAbout"
+                    style="@style/btnBlock"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/ic_about"
+                    android:text="@string/about"></Button>
+
+            </LinearLayout>
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnHelpTutorial"
                 style="@style/btnBlock"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:minWidth="300dp"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:drawableLeft="@drawable/ic_help_tutorial"
                 android:text="@string/help_tutorial"></Button>
-
-            <Button
-                android:id="@+id/btnAbout"
-                style="@style/btnBlock"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:drawableLeft="@drawable/ic_about"
-                android:text="@string/about"></Button>
 
         </LinearLayout>
     </ScrollView>

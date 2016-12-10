@@ -1,10 +1,16 @@
 package srvikram13.fitnfun.model;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -48,8 +54,33 @@ public class AppData extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    public static void loadLevels(Context ctx) {
+        AssetManager am = ctx.getAssets();
+
+        //Read text from file
+        StringBuilder text = new StringBuilder();
+
+        try {
+            InputStream inputStream = am.open("levels.txt");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader br = new BufferedReader(inputStreamReader);
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                text.append(line);
+                text.append('\n');
+            }
+            br.close();
+        }
+        catch (IOException e) {
+            //You'll need to add proper error handling here
+        }
+        Toast.makeText(ctx, text.toString(), Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
         //  LEVEL 1
         ArrayList<Instruction> inst = new ArrayList<>();
         inst.add(new Instruction(Action.SHAKE, 2, 2, "Shake the phone left to right 3 times."));

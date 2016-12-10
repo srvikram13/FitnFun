@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "997009032062",
+    "project_id": "firebase-fitnfun"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997009032062:android:45292167e436cf7e",
+        "android_client_info": {
+          "package_name": "srvikram13.fitnfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997009032062-94q0f0kkoqgtfm79t4sbgffcuqpj42r7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "srvikram13.fitnfun",
+            "certificate_hash": "F6C15FE7FBBBA9993F66379A971979311699FD59"
+          }
+        },
+        {
+          "client_id": "997009032062-3aj95kpskl6uvs9o1j8ob9ossvevhf72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPnlZSjq1EnsG6NRYKkEPbToLjzCjM9Ko"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
