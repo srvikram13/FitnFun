@@ -1,23 +1,23 @@
-SHAKE,2,2,Shake the phone left to right 3 times.
-JUMP,2,4,Jump in the air 3 times with the phone in your hand.
-SHAKE,3,3,Shake the phone left to right 3 times.
-JUMP,4,8,Jump in the air 5 times with the phone in your hand.
-JUMP,3,6,Jump in the air 7 times with the phone in your hand.
-JUMP,5,10,Jump in the air 3 times with the phone in your hand.
-SHAKE,5,5,Shake the phone left to right 3 times.
-LEVEL_SEPERATOR
-SHAKE,3,3,Shake the phone left to right 3 times.
-JUMP,3,6,Jump in the air 3 times with the phone in your hand.
-SHAKE,5,5,Shake the phone left to right 3 times.
-JUMP,5,10,Jump in the air 5 times with the phone in your hand.
-JUMP,7,14,Jump in the air 7 times with the phone in your hand.
-JUMP,3,6,Jump in the air 3 times with the phone in your hand.
-SHAKE,5,5,Shake the phone left to right 3 times.
-LEVEL_SEPERATOR
-SHAKE, 3, 3, "Shake the phone left to right 3 times."));
-JUMP, 3, 6, "Jump in the air 3 times with the phone in your hand.
-SHAKE, 5, 5, "Shake the phone left to right 3 times.
-JUMP, 5, 10, "Jump in the air 5 times with the phone in your hand.
-JUMP, 7, 14, "Jump in the air 7 times with the phone in your hand.
-JUMP, 3, 6, "Jump in the air 3 times with the phone in your hand.
-SHAKE, 5, 5, "Shake the phone left to right 3 times.
+SHAKE   2   2   Shake the phone left to right 3 times.
+JUMP    2   4   Jump in the air 3 times with the phone in your hand.
+SHAKE   3   3   Shake the phone left to right 3 times.
+JUMP	4	8	Jump in the air 5 times with the phone in your hand.
+JUMP	3	6	Jump in the air 7 times with the phone in your hand.
+JUMP	5	10	Jump in the air 3 times with the phone in your hand.
+SHAKE	5	5	Shake the phone left to right 3 times.
+LEVEL_SEPARATOR
+SHAKE	3	3	Shake the phone left to right 3 times.
+JUMP	3	6	Jump in the air 3 times with the phone in your hand.
+SHAKE	5	5	Shake the phone left to right 3 times.
+JUMP	5	10	Jump in the air 5 times with the phone in your hand.
+JUMP	7	14	Jump in the air 7 times with the phone in your hand.
+JUMP	3	6	Jump in the air 3 times with the phone in your hand.
+SHAKE	5	5	Shake the phone left to right 3 times.
+LEVEL_SEPARATOR
+SHAKE	3	3	Shake the phone left to right 3 times.
+JUMP	3	6	Jump in the air 3 times with the phone in your hand.
+SHAKE	5	5	Shake the phone left to right 3 times.
+JUMP	5	10	Jump in the air 5 times with the phone in your hand.
+JUMP	7	14	Jump in the air 7 times with the phone in your hand.
+JUMP	3	6	Jump in the air 3 times with the phone in your hand.
+SHAKE	5	5	Shake the phone left to right 3 times.

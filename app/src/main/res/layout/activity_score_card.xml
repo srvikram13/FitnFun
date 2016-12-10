@@ -54,14 +54,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="John Doe"
+                android:text=""
                 android:textAlignment="textStart"
                 style="@style/score"
                 android:layout_weight="2"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="90"
+                android:text=""
                 android:textAlignment="textEnd"
                 style="@style/score"
                 android:layout_weight="1"
@@ -74,14 +74,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vikram D"
+                android:text="Vikram Deshmukh"
                 android:textAlignment="textStart"
                 style="@style/score"
                 android:layout_weight="2"/>
             <TextView
+                android:id="@+id/finalScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="90"
+                android:text="10"
                 android:textAlignment="textEnd"
                 style="@style/highScore"
                 android:layout_weight="1"
@@ -92,7 +93,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vikram Won!"
+        android:text="Congrats!"
         style="@style/winner"/>
     <Space
         android:layout_width="match_parent"

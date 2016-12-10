@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import srvikram13.fitnfun.R;
 import srvikram13.fitnfun.model.AppData;
@@ -98,16 +99,14 @@ public class LoginActivity extends AppCompatActivity implements
             GoogleSignInAccount acct = result.getSignInAccount();
             Log.d(TAG, "handleSignInResult:" + getString(R.string.signed_in_fmt, acct.getDisplayName()));
             //mStatusTextView.setText(getString(R.string.signed_in_fmt, acct.getDisplayName()));
-            updateUI(true);
+            appData.saveUserInfo(acct.getDisplayName(), acct.getEmail(), acct.getPhotoUrl().toString());
+            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(i);
         } else {
             // Signed out, show unauthenticated UI.
-            updateUI(false);
+            Toast.makeText(this, "Authentication Failed. Please try again later.", Toast.LENGTH_LONG).show();
         }
     }
-
-    private void updateUI(boolean b) {
-    }
-
 
 }
 

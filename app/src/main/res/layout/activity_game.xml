@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="srvikram13.fitnfun.controller.MotionSensor">
+    tools:context="srvikram13.fitnfun.view.GameActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/time_remaining"
         android:gravity="center_horizontal"
+        android:textAllCaps="false"
         style="@style/h4"/>
 
     <Space
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="60"
+        android:text="30"
         style="@style/h0"/>
 
     <Space
@@ -55,7 +56,7 @@
         android:textAllCaps="false"
         android:padding="10dp"
         android:gravity="center_horizontal"
-        android:text="Jump on the spot 10 times."/>
+        android:text="Instructions appear here"/>
 
     <Space
         android:layout_width="match_parent"
@@ -76,15 +77,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="60"
+        android:text="0"
         style="@style/h1"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />
     <Button
+        android:id="@+id/btnStart"
+        style="@style/btnBlock"
+        android:layout_width="match_parent"
+        android:text="@string/start_game"
+        ></Button>
+    <Button
         android:id="@+id/btnEndGame"
         style="@style/btnBlock"
         android:layout_width="match_parent"
         android:text="@string/end_game"
+        android:visibility="gone"
         ></Button>
 </LinearLayout>

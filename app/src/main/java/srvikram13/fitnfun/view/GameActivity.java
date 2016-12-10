@@ -5,15 +5,23 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.camera2.params.StreamConfigurationMap;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+
 import srvikram13.fitnfun.R;
+import srvikram13.fitnfun.model.Action;
+import srvikram13.fitnfun.model.AppData;
+import srvikram13.fitnfun.model.GameLevel;
+import srvikram13.fitnfun.model.Instruction;
 
 public class GameActivity extends AppCompatActivity implements SensorEventListener, View.OnClickListener{
 
@@ -33,14 +41,35 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
     private Sensor gravitySensor, accelerometerSensor;
     private long mLastTime = 0;
     private boolean mUp = false;
+
     private int mJumpCounter = 0;
 
+    private MyCountDownTimer myCountDownTimer;
+    private AppData appData;
+    private TextView timeLeft;
+    private int currentScore;
+    public Instruction currentTask;
+    private GameLevel currentLevel;
+    private Button btnStart;
+    private Button btnEndGame;
+    private TextView nextChallengeInfo;
+    private TextView txtCurrentScore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        Button btnEndGame = (Button) findViewById(R.id.btnEndGame);
+        appData = AppData.getInstance(this);
+        appData.init();
+
+        timeLeft = (TextView) findViewById(R.id.countdownTimer);
+        nextChallengeInfo = (TextView) findViewById(R.id.nextChallenge);
+        txtCurrentScore = (TextView) findViewById(R.id.score);
+
+        btnStart = (Button) findViewById(R.id.btnStart);
+        btnStart.setOnClickListener(this);
+
+        btnEndGame = (Button) findViewById(R.id.btnEndGame);
         btnEndGame.setOnClickListener(this);
 
         //mJumpCounter = Utils.getCounterFromPreference(this);
@@ -83,6 +112,12 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
         if (Log.isLoggable(TAG, Log.DEBUG)) {
             Log.d(TAG, "Unregistered for sensor events");
         }
+        try {
+            endGame();
+
+        }catch (RuntimeException r) {
+
+        }
     }
 
     @Override
@@ -109,10 +144,10 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
     //Reference for Shske detection: http://stackoverflow.com/questions/2317428/android-i-want-to-shake-it
 
     // Minimum acceleration needed to count as a shake movement
-    private static final int MIN_SHAKE_ACCELERATION = 20;
+    private static final int MIN_SHAKE_ACCELERATION = 18;
 
     // Minimum number of movements to register a shake
-    private static final int MIN_MOVEMENTS = 4;
+    private static final int MIN_MOVEMENTS = 2;
 
     // Maximum time (in milliseconds) for the whole shake to occur
     private static final int MAX_SHAKE_DURATION = 1500;
@@ -135,7 +170,7 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
 
         // Get the max linear acceleration in any direction
         float maxLinearAcceleration = getMaxCurrentLinearAcceleration();
-        Log.d(TAG, maxLinearAcceleration +" << Max acceleration");
+        //Log.d(TAG, maxLinearAcceleration +" << Max acceleration");
         // Check if the acceleration is greater than our minimum threshold
         if (maxLinearAcceleration > MIN_SHAKE_ACCELERATION) {
             long now = System.currentTimeMillis();
@@ -164,6 +199,9 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
                     Log.d(TAG, "SHAKE!!!, moveCount: " + moveCount);
                     Toast.makeText(this, "Shake Detected!!!", Toast.LENGTH_LONG).show();
 
+                    if(currentTask.action == Action.SHAKE) {
+                        updateTaskStatus();
+                    }
                     // Reset for the next one!
                     resetShakeDetection();
                 }
@@ -260,20 +298,75 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
                 // going down
                 Log.d(TAG, "Going DOWN");
                 mUp = false;
+                if(currentTask.action == Action.JUMP) {
+                    updateTaskStatus();
+                }
                 Log.d(TAG, "JUMP!!!");
                 Toast.makeText(this, "Jump Detected!!!", Toast.LENGTH_LONG).show();
             }
         }
     }
 
+    private void nextTask() {
+        currentLevel = appData.getGameLevel();
+        appData.setCurrentInstruction(appData.getCurrentInstruction() + 1);
+        currentTask = currentLevel.instructions.get(appData.getCurrentInstruction());
+        mJumpCounter = currentTask.count;
+        nextChallengeInfo.setText(currentTask.description.replace("*#*", String.valueOf(mJumpCounter)));
+    }
+    public void updateTaskStatus() {
+        currentScore += currentTask.points;
+        mJumpCounter--;
+        txtCurrentScore.setText(String.valueOf(currentScore));
+
+        if(mJumpCounter == 0) {
+            nextTask();
+            return;
+        }
+        nextChallengeInfo.setText(currentTask.description.replace("*#*", String.valueOf(mJumpCounter)));
+    }
     @Override
     public void onClick(View view) {
-        Intent i;
         switch(view.getId()) {
+            case R.id.btnStart:
+                btnStart.setVisibility(View.GONE);
+                btnEndGame.setVisibility(View.VISIBLE);
+                myCountDownTimer = new MyCountDownTimer(AppData.LEVEL_TIME * 1000, 1000);
+                myCountDownTimer.start();
+                appData.setCurrentLevel(1);
+                appData.setCurrentInstruction(0);
+                currentScore = 0;
+                txtCurrentScore.setText(String.valueOf(currentScore));
+                nextTask();
+            break;
             case R.id.btnEndGame:
-                i = new Intent(this, ScoreCardActivity.class);
-                startActivity(i);
+                endGame();
                 break;
+        }
+    }
+    public void endGame() {
+        myCountDownTimer.cancel();
+        appData.saveScore(currentScore, appData.getCurrentLevel());
+        Intent i = new Intent(getApplicationContext(), ScoreCardActivity.class);
+        startActivity(i);
+    }
+    public class MyCountDownTimer extends CountDownTimer {
+
+        public MyCountDownTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+
+            int progress = (int) (millisUntilFinished/1000);
+            timeLeft.setText(String.valueOf(progress));
+            //progressBar.setProgress(progressBar.getMax()-progress);
+        }
+        @Override
+        public void onFinish()
+        {
+            endGame();
         }
     }
 

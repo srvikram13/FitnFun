@@ -27,7 +27,7 @@
         <activity
             android:name=".view.HomeActivity" />
         <activity android:name=".view.NewGameActivity" />
-        <activity android:name=".view.GameActivity" />
+        <activity android:name=".view.GameActivity" android:screenOrientation="portrait"/>
         <activity android:name=".view.ScoreCardActivity" />
         <activity android:name=".view.ProfileActivity" />
         <activity android:name=".view.ScoreBoardActivity"></activity>
