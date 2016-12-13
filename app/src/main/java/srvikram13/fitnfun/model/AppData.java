@@ -87,30 +87,40 @@ public class AppData extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public static void loadLevels(Context ctx) {
+    public void loadLevels(Context ctx) {
         AssetManager am = ctx.getAssets();
 
+        ArrayList<Instruction> inst = new ArrayList<>();
         //Read text from file
-        StringBuilder text = new StringBuilder();
-
         try {
             InputStream inputStream = am.open("levels.txt");
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader br = new BufferedReader(inputStreamReader);
             String line;
-
+            inst = new ArrayList<>();
             while ((line = br.readLine()) != null) {
-                text.append(line);
-                text.append('\n');
+                String[] row = line.split("\t");
+                if(row.length != 4) { // start of a new level
+                    gameLevels.add(new GameLevel(inst));
+                    inst = new ArrayList<>();
+                } else { // add instruction to existing level
+                    inst.add(new Instruction(getAction(row[0]), Integer.parseInt(row[1]), Integer.parseInt(row[2]), row[3]));
+                }
             }
             br.close();
         }
         catch (IOException e) {
             //You'll need to add proper error handling here
         }
-        Toast.makeText(ctx, text.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(ctx, text.toString(), Toast.LENGTH_LONG).show();
     }
-
+    private static Action getAction(String action) {
+        switch (action) {
+            case "SHAKE": return Action.SHAKE;
+            case "JUMP": return Action.JUMP;
+        }
+        return Action.JUMP;
+    }
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d(TAG, "in onCreate");
