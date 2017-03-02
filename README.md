@@ -2,31 +2,37 @@
   <content>
 # Fit 'n Fun
 
+## Logo
+[![FitnFun Logo](https://github.com/srvikram13/FitnFun/blob/master/app/src/main/res/mipmap-mdpi/ic_launcher.png?raw=true)]
+
+
+## Motto
+*Get Fit, while having fun*
+
+
+## Description
 A fun app that encourages users to engage in physical activity, get fit, and have fun while doing so.
 
+
 ## Installation
+The App makes use of nearly all the features available.
+1. Sensors: Accelerometer, and Gravity sensors (for 'Shake' and 'Jump' detection respectively.)
+2. Location Service
+3. SharedPreferences to store logged in user's information.
+4. File I/O to read exercise information. (Every round of exercise is stored in a text file)
+5. DB storage to store and retrieve user's scores and performance over time.
+6. Single Sign-On using the [Firebase API for Android](https://firebase.google.com/docs/auth/android/google-signin).
 
-TODO: Describe the installation process
 
-## Usage
+## The Pitch!
+[![FitnFun Pitch Video](https://github.com/srvikram13/FitnFun/blob/master/FinnFun%20Screenshot.png?raw=true)](https://www.youtube.com/watch?v=Ldt10iN7B4c)
 
-TODO: Write usage instructions
 
-## Contributing
+## SlideDeck
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+Slide Deck that showcases all the features of the app.
+URL: [http://bit.ly/FitnFun-SlideDeck](http://bit.ly/FitnFun-SlideDeck)
 
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
 
 ## License
 
