@@ -16,12 +16,13 @@ A fun app that encourages users to engage in physical activity, get fit, and hav
 
 ## Installation
 The App makes use of nearly all the features available.
+
 1. Sensors: Accelerometer, and Gravity sensors (for 'Shake' and 'Jump' detection respectively.)
 2. Location Service
 3. SharedPreferences to store logged in user's information.
-4. File I/O to read exercise information. (Every round of exercise is stored in a text file)
-5. DB storage to store and retrieve user's scores and performance over time.
-6. Single Sign-On using the [Firebase API for Android](https://firebase.google.com/docs/auth/android/google-signin).
+1. File I/O to read exercise information. (Every round of exercise is stored in a text file)
+2. DB storage to store and retrieve user's scores and performance over time.
+3. Single Sign-On using the [Firebase API for Android](https://firebase.google.com/docs/auth/android/google-signin).
 
 
 ## The Pitch!
