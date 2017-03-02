@@ -1,7 +1,7 @@
 <snippet>
   <content>
 
-![FitnFun Logo](https://github.com/srvikram13/FitnFun/blob/master/app/src/main/res/mipmap-mdpi/ic_launcher.png?raw=true)# Fit 'n Fun
+#![FitnFun Logo](https://github.com/srvikram13/FitnFun/blob/master/app/src/main/res/mipmap-mdpi/ic_launcher.png?raw=true) Fit 'n Fun
 
 ## Logo
 
