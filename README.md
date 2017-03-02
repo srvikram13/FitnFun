@@ -15,15 +15,8 @@ A fun app that encourages users to engage in physical activity, get fit, and hav
 
 
 ## Installation
-1. Sensors: Accelerometer, and Gravity sensors (for 'Shake' and 'Jump' detection respectively.)
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
 The App makes use of nearly all the features available.
-1.  Sensors: Accelerometer, and Gravity sensors (for 'Shake' and 'Jump' detection respectively.)
+1. Sensors: Accelerometer, and Gravity sensors (for 'Shake' and 'Jump' detection respectively.)
 2. Location Service
 3. SharedPreferences to store logged in user's information.
 4. File I/O to read exercise information. (Every round of exercise is stored in a text file)
