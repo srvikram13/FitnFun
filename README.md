@@ -21,7 +21,7 @@ The App makes use of nearly all the features available.
 
 
 ## The Pitch!
-[![FitnFun Pitch Video](https://github.com/srvikram13/FitnFun/blob/master/FinnFun%20Screenshot.png?raw=true)](https://www.youtube.com/watch?v=Ldt10iN7B4c)
+[![FitnFun Pitch Video](https://github.com/srvikram13/FitnFun/blob/master/FitnFun%20Screenshot.png?raw=true)](https://www.youtube.com/watch?v=Ldt10iN7B4c)
 
 
 ## SlideDeck
